@@ -6,12 +6,12 @@ const CompanyInfo = () => {
     const [companyName, setcompanyName] = useState(""); // Company Name
     const [companyLink, setCompanyLink] = useState(""); // Company Link
     const [positionType, setPositionType] = useState(""); // Category
-    const [jobTitle, setJobTitle] = useState(""); // Job Posting
-    const [jobLink, setJobLink] = useState(""); // Job Link
-    const [alumni, setAlumni] = useState("N"); // Alumni
-    const [location, setLocation] = useState(""); // Location
+    // const [jobTitle, setJobTitle] = useState(""); // Job Posting
+    const [careerPageLink, setCareerPageLink] = useState(""); // careerPage Link
+    // const [alumni, setAlumni] = useState("N"); // Alumni
+    // const [location, setLocation] = useState(""); // Location
     const [date, setDate] = useState(""); // Date of last visit
-    const [linkedin, setLinkedin] = useState(""); // Linkedin Link
+    // const [linkedin, setLinkedin] = useState(""); // Linkedin Link
     const [notes, setNotes] = useState(""); // notes
     
     const handleSubmit = (e) => {
@@ -21,12 +21,12 @@ const CompanyInfo = () => {
             companyName:companyName, 
             companyLink: companyLink,
             positionType:positionType,
-            jobTitle:jobTitle,
-            jobLink: jobLink,
-            alumni:alumni,
-            location: location,
+            // jobTitle:jobTitle,
+            careerPageLink: careerPageLink,
+            // alumni:alumni,
+            // location: location,
             date: date,
-            linkedin: linkedin,
+            // linkedin: linkedin,
             notes:notes
             
         })
@@ -44,10 +44,10 @@ const CompanyInfo = () => {
         setcompanyName('');
         setCompanyLink('');
         setPositionType("");
-        setJobTitle('');
-        setJobLink('');
-        setAlumni("N");
-        setLocation('');
+        // setJobTitle('');
+        setCareerPageLink('');
+        // setAlumni("N");
+        // setLocation('');
         setDate('');
         setNotes('');
     };
@@ -71,22 +71,23 @@ const CompanyInfo = () => {
             </select>
 
 
-            <label>Job Posting</label>
-            <input placeholder="name" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}></input>
-            <label>Job Link</label>
-            <input placeholder="https://companyLink/careers" value={jobLink} onChange={(e) => setJobLink(e.target.value)}></input>
+            {/* <label>Job Posting</label>
+            <input placeholder="name" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}></input> */}
 
-            <label>Alumni</label>
-            <input placeholder="" value={alumni} onChange={(e) => setAlumni(e.target.value)}></input>
+            <label>Career Page Link</label>
+            <input placeholder="https://companyLink/careers" value={careerPageLink} onChange={(e) => setCareerPageLink(e.target.value)}></input>
 
-            <label>Location</label>
-            <input placeholder="City, State" value={location} onChange={(e) => setLocation(e.target.value)}></input>
+            {/* <label>Alumni</label>
+            <input placeholder="" value={alumni} onChange={(e) => setAlumni(e.target.value)}></input> */}
+
+            {/* <label>Location</label>
+            <input placeholder="City, State" value={location} onChange={(e) => setLocation(e.target.value)}></input> */}
 
             <label>Date of Visit</label>
-            <input placeholder="mm/dd/yyyy" value={date} onChange={(e) => setDate(e.target.value)}></input>
+            <input placeholder="mm/dd/yyyy" type="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
 
-            <label>Linkedin Link</label>
-            <input placeholder="https://Linkedin.com" value={linkedin} onChange={(e) => setLinkedin(e.target.value)}></input>
+            {/* <label>Linkedin Link</label>
+            <input placeholder="https://Linkedin.com" value={linkedin} onChange={(e) => setLinkedin(e.target.value)}></input> */}
 
             <label>Notes</label>
             <textarea placeholder="message" value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
