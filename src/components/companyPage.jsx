@@ -31,10 +31,12 @@ const CompanyInfo = () => {
             
         })
         .then(() =>{
+            console.log("THIS RAN1")
             // This is where I should put my snackbar
             alert("Sucess! Form processed.")
         })
         .catch(error => {
+            console.log("THIS RAN2")
             alert("Failed: Form not successfully processes.")
             alert(error.message);
         });

@@ -3,7 +3,7 @@ import CompanyInfo from './components/companyPage';
 
 // Information on how to deploy app:
 // add it to git repo
-// npm run deloy -- adds it to webpage
+// npm run deploy -- adds it to webpage
 // https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 
 
