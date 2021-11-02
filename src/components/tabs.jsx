@@ -5,6 +5,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import CompanyInfo from '../components/companyPage'
+import Application from './jobApp';
 
 function Tabs() {
   const [value, setValue] = React.useState('1');
@@ -18,15 +19,17 @@ function Tabs() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Item One" value="1" />
-            <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="3" />
+            <Tab label="Add New Company" value="1" />
+            <Tab label="Application Sent" value="2" />
+            <Tab label="Analytics" value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">
             <CompanyInfo/>
         </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="2">
+            <Application/>
+        </TabPanel>
         <TabPanel value="3">Item Three</TabPanel>
       </TabContext>
     </Box>

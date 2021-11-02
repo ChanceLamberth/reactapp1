@@ -85,7 +85,7 @@ const CompanyInfo = () => {
             <input placeholder="City, State" value={location} onChange={(e) => setLocation(e.target.value)}></input> */}
 
             <label>Date of Visit</label>
-            <input placeholder="mm/dd/yyyy" type="date" value={date} onChange={(e) => setDate(e.target.value)}></input>
+            <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={date} onChange={(e) => setDate(e.target.value)}></input>
 
             {/* <label>Linkedin Link</label>
             <input placeholder="https://Linkedin.com" value={linkedin} onChange={(e) => setLinkedin(e.target.value)}></input> */}
