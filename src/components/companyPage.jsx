@@ -54,10 +54,11 @@ const CompanyInfo = () => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <h1>Add A New Company</h1>
+            <h1>Add A New Company To The Database</h1>
 
             <label>Company Name</label>
             <input placeholder="company name" value={companyName} onChange={(e) => setcompanyName(e.target.value)}></input>
+            {/* Need to check if company exists or not -- Firebase rule validation */}
 
             <label>Company Link</label>
             <input placeholder="https://companyLink.com" value={companyLink} onChange={(e) => setCompanyLink(e.target.value)}></input>

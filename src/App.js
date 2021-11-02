@@ -1,5 +1,5 @@
 import './App.css';
-import CompanyInfo from './components/companyPage';
+import Tabs from './components/tabs';
 
 // Information on how to deploy app:
 // add it to git repo
@@ -10,7 +10,8 @@ import CompanyInfo from './components/companyPage';
 function App() {
   return (
     <div className="App">
-      <CompanyInfo/>
+      <Tabs/>
+      
     </div>
   );
 }
