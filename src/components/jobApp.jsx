@@ -37,22 +37,25 @@ function Application() {
     return(
         <form className="form" onSubmit={handleSubmit}>
            <h1>Add a new application</h1>
-            <label>Company Name</label>
-            {/* May wnat to make this into a select when I get firebase company names */}
-            <input placeholder="Company Name" vlaue={companyName} onChange={(e) => setCompanyName(e.target.value)} />
+           <div className="container">
+                <label>Company Name</label>
+                {/* May wnat to make this into a select when I get firebase company names */}
+            
+                <input placeholder="Company Name" vlaue={companyName} onChange={(e) => setCompanyName(e.target.value)} />
 
-            <label>Position</label>
-            <input placeholder="Software Engineer" vlaue={positionTitle} onChange={(e) => setPositionTitle(e.target.value)} />
+                <label>Position</label>
+                <input placeholder="Software Engineer" vlaue={positionTitle} onChange={(e) => setPositionTitle(e.target.value)} />
 
-            <label>Date of Visit</label>
-            <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={dateApplied} onChange={(e) => setDateApplied(e.target.value)}></input>
+                <label>Date of Visit</label>
+                <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={dateApplied} onChange={(e) => setDateApplied(e.target.value)}></input>
 
-            <label>Category</label>
-            <select placeholder="select one" value={positionType} onChange={(e) => setPositionType(e.target.value)}>
-                <option>Internship</option>
-                <option>Full-time</option>
-                <option>Post-align</option>
-            </select>
+                <label>Category</label>
+                <select placeholder="select one" value={positionType} onChange={(e) => setPositionType(e.target.value)}>
+                    <option>Internship</option>
+                    <option>Full-time</option>
+                    <option>Post-align</option>
+                </select>
+            </div>
 
             <button type>Submit</button>
         </form>

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import database from "../firebase"
-import "../styles/companyPage.css"
+import "../styles/formStyles.css"
 
 const CompanyInfo = () => {
     const [companyName, setcompanyName] = useState(""); // Company Name
@@ -56,42 +56,45 @@ const CompanyInfo = () => {
         <form className="form" onSubmit={handleSubmit}>
             <h1>Add A New Company To The Database</h1>
 
-            <label>Company Name</label>
-            <input placeholder="company name" value={companyName} onChange={(e) => setcompanyName(e.target.value)}></input>
-            {/* Need to check if company exists or not -- Firebase rule validation */}
+            <div>
 
-            <label>Company Link</label>
-            <input placeholder="https://companyLink.com" value={companyLink} onChange={(e) => setCompanyLink(e.target.value)}></input>
-            
+                <label>Company Name</label>
+                <input placeholder="company name" value={companyName} onChange={(e) => setcompanyName(e.target.value)}></input>
+                {/* Need to check if company exists or not -- Firebase rule validation */}
 
-            <label>Category</label>
-            <select placeholder="select one" value={positionType} onChange={(e) => setPositionType(e.target.value)}>
-                <option>Internship</option>
-                <option>Full-time</option>
-                <option>Post-align</option>
-            </select>
+                <label>Company Link</label>
+                <input placeholder="https://companyLink.com" value={companyLink} onChange={(e) => setCompanyLink(e.target.value)}></input>
+                
+
+                <label>Category</label>
+                <select placeholder="select one" value={positionType} onChange={(e) => setPositionType(e.target.value)}>
+                    <option>Internship</option>
+                    <option>Full-time</option>
+                    <option>Post-align</option>
+                </select>
 
 
-            {/* <label>Job Posting</label>
-            <input placeholder="name" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}></input> */}
+                {/* <label>Job Posting</label>
+                <input placeholder="name" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}></input> */}
 
-            <label>Career Page Link</label>
-            <input placeholder="https://companyLink/careers" value={careerPageLink} onChange={(e) => setCareerPageLink(e.target.value)}></input>
+                <label>Career Page Link</label>
+                <input placeholder="https://companyLink/careers" value={careerPageLink} onChange={(e) => setCareerPageLink(e.target.value)}></input>
 
-            {/* <label>Alumni</label>
-            <input placeholder="" value={alumni} onChange={(e) => setAlumni(e.target.value)}></input> */}
+                {/* <label>Alumni</label>
+                <input placeholder="" value={alumni} onChange={(e) => setAlumni(e.target.value)}></input> */}
 
-            {/* <label>Location</label>
-            <input placeholder="City, State" value={location} onChange={(e) => setLocation(e.target.value)}></input> */}
+                {/* <label>Location</label>
+                <input placeholder="City, State" value={location} onChange={(e) => setLocation(e.target.value)}></input> */}
 
-            <label>Date of Visit</label>
-            <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={date} onChange={(e) => setDate(e.target.value)}></input>
+                <label>Date of Visit</label>
+                <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={date} onChange={(e) => setDate(e.target.value)}></input>
 
-            {/* <label>Linkedin Link</label>
-            <input placeholder="https://Linkedin.com" value={linkedin} onChange={(e) => setLinkedin(e.target.value)}></input> */}
+                {/* <label>Linkedin Link</label>
+                <input placeholder="https://Linkedin.com" value={linkedin} onChange={(e) => setLinkedin(e.target.value)}></input> */}
 
-            <label>Notes</label>
-            <textarea placeholder="message" value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
+                <label>Notes</label>
+                <textarea placeholder="message" value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
+            </div>
 
             <button type>Submit</button>
         </form> 
