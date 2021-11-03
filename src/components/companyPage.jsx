@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import database from "../firebase"
 import "../styles/formStyles.css"
 
@@ -13,7 +13,8 @@ const CompanyInfo = () => {
     const [date, setDate] = useState(""); // Date of last visit
     // const [linkedin, setLinkedin] = useState(""); // Linkedin Link
     const [notes, setNotes] = useState(""); // notes
-    
+    const [buttonDiable, setButtonDiable] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -37,7 +38,6 @@ const CompanyInfo = () => {
         })
         .catch(error => {
             console.log("THIS RAN2")
-            alert("Failed: Form not successfully processes.")
             alert(error.message);
         });
 
@@ -53,7 +53,7 @@ const CompanyInfo = () => {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" style={{maxWidth: "300px"}} onSubmit={handleSubmit}>
             <h1>Add A New Company To The Database</h1>
 
             <div>
@@ -96,7 +96,7 @@ const CompanyInfo = () => {
                 <textarea placeholder="message" value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
             </div>
 
-            <button type>Submit</button>
+            <button>Submit</button>
         </form> 
     );
 }

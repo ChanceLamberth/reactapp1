@@ -1,4 +1,5 @@
 import './App.css';
+import CompanyInfo from './components/companyPage';
 import Tabs from './components/tabs';
 
 // Information on how to deploy app:
@@ -10,7 +11,8 @@ import Tabs from './components/tabs';
 function App() {
   return (
     <div className="App">
-      <Tabs/>
+      {/* <Tabs/> */}
+      <CompanyInfo/>
     </div>
   );
 }

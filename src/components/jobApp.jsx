@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import database from "../firebase";
 
+
 function Application() {
     const [companyName, setCompanyName] = useState("");
     const [positionTitle, setPositionTitle] = useState("");
     const [dateApplied, setDateApplied] = useState("");
     const [positionType, setPositionType] = useState("none");
+    const [buttonDiable, setButtonDiable] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,7 +26,6 @@ function Application() {
         })
         .catch(error => {
             // console.log("THIS RAN2")
-            alert("Failed: Form not successfully processes.")
             alert(error.message);
         });
 
@@ -57,7 +58,7 @@ function Application() {
                 </select>
             </div>
 
-            <button type>Submit</button>
+            <button disabled={buttonDiable}>Submit</button>
         </form>
     )
 
