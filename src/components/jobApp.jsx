@@ -7,7 +7,6 @@ function Application() {
     const [positionTitle, setPositionTitle] = useState("");
     const [dateApplied, setDateApplied] = useState("");
     const [positionType, setPositionType] = useState("none");
-    const [buttonDiable, setButtonDiable] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,10 +41,10 @@ function Application() {
                 <label>Company Name</label>
                 {/* May wnat to make this into a select when I get firebase company names */}
             
-                <input placeholder="Company Name" vlaue={companyName} onChange={(e) => setCompanyName(e.target.value)} />
+                <input placeholder="Company Name" value={companyName} onChange={(e) => setCompanyName(e.target.value)} />
 
                 <label>Position</label>
-                <input placeholder="Software Engineer" vlaue={positionTitle} onChange={(e) => setPositionTitle(e.target.value)} />
+                <input placeholder="Software Engineer" value={positionTitle} onChange={(e) => setPositionTitle(e.target.value)} />
 
                 <label>Date of Visit</label>
                 <input placeholder="mm/dd/yyyy" type="date" style={{fontFamily: "arial"}} value={dateApplied} onChange={(e) => setDateApplied(e.target.value)}></input>
@@ -58,7 +57,7 @@ function Application() {
                 </select>
             </div>
 
-            <button disabled={buttonDiable}>Submit</button>
+            <button>Submit</button>
         </form>
     )
 

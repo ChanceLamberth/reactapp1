@@ -11,8 +11,8 @@ import Tabs from './components/tabs';
 function App() {
   return (
     <div className="App">
-      {/* <Tabs/> */}
-      <CompanyInfo/>
+      <Tabs/>
+      {/* <CompanyInfo/> */}
     </div>
   );
 }
