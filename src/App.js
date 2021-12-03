@@ -1,6 +1,13 @@
 import './App.css';
-import CompanyInfo from './components/companyPage';
 import Tabs from './components/tabs';
+import HomePage from './pages/homepage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/contentPage.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import Navigation from './components/Navbar';
+import Error from './components/Error';
+import LoginPage from './components/login';
 
 // Information on how to deploy app:
 // add it to git repo
@@ -10,10 +17,14 @@ import Tabs from './components/tabs';
 
 function App() {
   return (
-    <div className="App">
-      <Tabs/>
-      {/* <CompanyInfo/> */}
-    </div>
+    <main>
+      <Navigation/>
+      <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/error" element={<Error/>} />
+          <Route path="/login" element={<LoginPage/>} />
+      </Routes>
+    </main>
   );
 }
 
