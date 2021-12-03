@@ -20,7 +20,7 @@ export default function BasicCard(props) {
     let price = props.price;
     console.log(value, "THIS IS Value")
   return (
-    <Card sx={{ minWidth: 275, maxWidth: 275, boxShadow: '2px 3px 4px 4px #ccc', marginRight: 4, marginLeft: 2 }}>
+    <Card sx={{ minWidth: 275, maxWidth: 275, boxShadow: '2px 3px 4px 4px #ccc', marginRight: 4, marginLeft: 2, marginBottom: 2 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {value}
